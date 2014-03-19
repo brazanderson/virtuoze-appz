@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='showcase'>
+  <inherits name='com.brazoft.virtuoze.Widgets' />
+  <inherits name='com.brazoft.virtuoze.Commons' />
+
+  <source path="showcase/ui" />
+  <source path="showcase/i18n" />
+  <public path="showcase/css"/>
+  
+  <stylesheet src="showcase.css"/>
+  
+  <extend-property name="locale" values="pt" />
+
+  <!-- Dev Settings 
+  -->
+  <collapse-all-properties /> 
+
+  <entry-point class='com.brazoft.virtuoze.showcase.ui.Showcase' />
+  
+  <!-- Syntax highlight -->
+  <public path="showcase/highlight"/>
+  
+  <stylesheet src="shCore.css"/>
+  <stylesheet src="shThemeEclipse.css"/>
+  
+  <script src="shCore.js"/>
+  <script src="shBrushJava.js"/>
+  <script src="shBrushXml.js"/>
+</module>

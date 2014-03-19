@@ -1,0 +1,170 @@
+<codes>
+  <code id="client.maven.parent">
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>com.brazoft.virtuoze</groupId>
+          <artifactId>client</artifactId>
+          <version>{0}</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+  </code>
+  <code id="client.maven.dependencies">
+    <dependencies>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-user</artifactId>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-servlet</artifactId>
+        <version>${gwt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.googlecode.gwtquery</groupId>
+        <artifactId>gwtquery</artifactId>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.fusesource.restygwt</groupId>
+        <artifactId>restygwt</artifactId>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+  </code>
+  <code id="maven.repository">
+    <repositories>
+      <repository>
+        <id>brazoft</id>
+        <url>http://apps-brazoft.rhcloud.com/nexus/content/groups/public</url>
+        <releases>
+          <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+      </repository>
+    </repositories>
+  </code>
+  <code id="client.maven.archetype">
+    <pre><code>mvn archetype:generate -DarchetypeGroupId=com.brazoft.virtuoze -DarchetypeArtifactId=client-archetype -DarchetypeVersion={0}</code></pre>
+  </code>
+  
+  <code id="alert">
+    new Alert().add(new Paragraph().html("{0}").classes().append(Alert.Color.SUCCESS);
+    new Alert().add(new Paragraph().html("{1}").classes().append(Alert.Color.INFO);
+    new Alert().add(new Paragraph().html("{2}").classes().append(Alert.Color.WARNING);
+    new Alert().add(new Paragraph().html("{3}").classes().append(Alert.Color.DANGER);
+  </code>
+  <code id="alert.dismissable">
+    new Alert().add(new Paragraph().html("{0}")).closeable().classes().append(Alert.Color.SUCCESS);
+  </code>
+  
+  <code id="badge">
+    new Badge().text("{0}")
+  </code>
+  <code id="badge.adapt.pill">
+    Pills pills = new Pills();
+    pills.addPill().text("{0}").addBadge().text("{1}");
+    pills.addPill().text("{2}");
+  </code>
+  <code id="typography.heading">
+    new Heading(Heading.Level.ONE).text("H1. Heading");
+    new Heading(Heading.Level.TWO).text("H2. Heading");
+    new Heading(Heading.Level.THREE).text("H3. Heading");
+    new Heading(Heading.Level.FOUR).text("H4. Heading");
+    new Heading(Heading.Level.FIVE).text("H5. Heading");
+    new Heading(Heading.Level.SIX).text("H6. Heading");
+  </code>
+  <code id="typography.heading.classes">
+    new Paragraph().text("H1. Heading").classes().set(HeadingClass.LEVEL_ONE);
+    new Paragraph().text("H2. Heading").classes().set(HeadingClass.LEVEL_TWO);
+    new Paragraph().text("H3. Heading").classes().set(HeadingClass.LEVEL_THREE);
+    new Paragraph().text("H4. Heading").classes().set(HeadingClass.LEVEL_FOUR);
+    new Paragraph().text("H5. Heading").classes().set(HeadingClass.LEVEL_FIVE);
+    new Paragraph().text("H6. Heading").classes().set(HeadingClass.LEVEL_SIX);
+  </code>
+  <code id="typography.heading.secondary">
+    new Heading(Heading.Level.ONE).text("H1. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.TWO).text("H2. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.THREE).text("H3. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.FOUR).text("H4. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.FIVE).text("H5. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.SIX).text("H6. Heading").headline("Secondary Text");
+  </code>
+  <code id="typography.paragraph">
+    new Paragraph().html("{0}");
+  </code>
+  <code id="typography.paragraph.lead">
+    new Paragraph().html("{0}").lead();
+  </code>
+  <code id="typography.blockquote">
+    new Blockquote().text("{0}");
+  </code>
+  <code id="typography.blockquote.footer">
+    new Blockquote().text("{0}").footer("{1}");
+  </code>
+  <code id="typography.blockquote.reverse">
+    new Blockquote().text("{0}").footer("{1}").reverse();
+  </code>
+  <code id="typography.list.unordered">
+    OrderList list = new OrderList(OrderList.Type.UNORDERED);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.list.ordered">
+    OrderList list = new OrderList(OrderList.Type.ORDERED);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.list.unstyled">
+    list = new OrderList(OrderList.Type.ORDERED);
+    list.classes().append(OrderList.Style.UNSTYLED);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.list.inline">
+    list = new OrderList(OrderList.Type.ORDERED);
+    list.classes().append(OrderList.Style.INLINE);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.description">
+    DescriptionList description = new DescriptionList();
+    description.addItem("Description lists", "A description list is perfect for defining terms.");
+    description.addItem("Euismod", "Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.");
+  </code>
+  <code id="typography.description.horizontal">
+    DescriptionList description = new DescriptionList().horizontal();
+    description.addItem("Description lists", "A description list is perfect for defining terms.");
+    description.addItem("Euismod", "Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.");
+  </code>
+  <code id="breadcrumb">
+    Breadcrumb breadcrumb = new Breadcrumb();
+    breadcrumb.addItem().text("Home").onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        Window.alert("Home item clicked");
+      }
+    });
+    breadcrumb.addItem().text("Profile");
+    breadcrumb.addItem().text("User");
+  </code>
+</codes>

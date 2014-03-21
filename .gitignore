@@ -1,6 +1,14 @@
-*.class
+.DS_Store
+*target*
+*.versionsBackup
+.project
+.classpath
+bin
+.settings
 
-# Package Files #
-*.jar
-*.war
-*.ear
+**/.DS_Store
+**/*.versionsBackup
+**/.project
+**/.classpath
+**/bin
+**/.settings

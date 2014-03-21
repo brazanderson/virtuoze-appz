@@ -2,7 +2,7 @@ package com.brazoft.virtuoze.showcase.i18n;
 
 /**
  * Interface to represent the constants contained in resource bundle:
- * 	'/Users/andersonbraz/Documents/workspace/brazoft/maven/virtuoze/showcase/src/main/resources/com/brazoft/virtuoze/showcase/i18n/Constants.properties'.
+ * 	'/Users/andersonbraz/Documents/workspace/brazoft/maven/virtuoze-appz/showcase/src/main/resources/com/brazoft/virtuoze/showcase/i18n/Constants.properties'.
  */
 public interface Constants extends com.google.gwt.i18n.client.ConstantsWithLookup {
   
@@ -43,49 +43,13 @@ public interface Constants extends com.google.gwt.i18n.client.ConstantsWithLooku
   String alertWarning();
 
   /**
-   * Translated "Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed line-height (10px by default). Use Paragraph class to create it.".
+   * Translated "".
    * 
-   * @return translated "Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed line-height (10px by default). Use Paragraph class to create it."
+   * @return translated ""
    */
-  @DefaultStringValue("Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their computed line-height (10px by default). Use Paragraph class to create it.")
-  @Key("bodyCopy")
-  String bodyCopy();
-
-  /**
-   * Translated "Know all you can do with Virtuoze Client Architecture. We just cover some gaps to provide you amazing solutions.".
-   * 
-   * @return translated "Know all you can do with Virtuoze Client Architecture. We just cover some gaps to provide you amazing solutions."
-   */
-  @DefaultStringValue("Know all you can do with Virtuoze Client Architecture. We just cover some gaps to provide you amazing solutions.")
-  @Key("caDescription")
-  String caDescription();
-
-  /**
-   * Translated "All the Virtuoze Client Architecture is based on <a href=\"http://www.gwtproject.org\" target=\"_blank\">GWT</a> and <a href=\"http://getbootstrap.com\" target=\"_blank\">Bootstrap</a>. Furthermore, we just develop amazing widgets, that it is not present in native Bootstrap, to empower your web applications.".
-   * 
-   * @return translated "All the Virtuoze Client Architecture is based on <a href=\"http://www.gwtproject.org\" target=\"_blank\">GWT</a> and <a href=\"http://getbootstrap.com\" target=\"_blank\">Bootstrap</a>. Furthermore, we just develop amazing widgets, that it is not present in native Bootstrap, to empower your web applications."
-   */
-  @DefaultStringValue("All the Virtuoze Client Architecture is based on <a href=\"http://www.gwtproject.org\" target=\"_blank\">GWT</a> and <a href=\"http://getbootstrap.com\" target=\"_blank\">Bootstrap</a>. Furthermore, we just develop amazing widgets, that it is not present in native Bootstrap, to empower your web applications.")
-  @Key("caIntro")
-  String caIntro();
-
-  /**
-   * Translated "You probably know GWT compiles Java code into Javascript one. We prefer to use GWT compiled Javascript than use embedded Javascript (like jquery). Always it is possible, we will migrate native Javascript code to GWT one. All the bootstrap pieces you find here are using <code>GWT compiled</code> code instead of using <code>bootstrap.js</code>.".
-   * 
-   * @return translated "You probably know GWT compiles Java code into Javascript one. We prefer to use GWT compiled Javascript than use embedded Javascript (like jquery). Always it is possible, we will migrate native Javascript code to GWT one. All the bootstrap pieces you find here are using <code>GWT compiled</code> code instead of using <code>bootstrap.js</code>."
-   */
-  @DefaultStringValue("You probably know GWT compiles Java code into Javascript one. We prefer to use GWT compiled Javascript than use embedded Javascript (like jquery). Always it is possible, we will migrate native Javascript code to GWT one. All the bootstrap pieces you find here are using <code>GWT compiled</code> code instead of using <code>bootstrap.js</code>.")
-  @Key("ceIntro")
-  String ceIntro();
-
-  /**
-   * Translated "Compiled vs Embedded Javascript".
-   * 
-   * @return translated "Compiled vs Embedded Javascript"
-   */
-  @DefaultStringValue("Compiled vs Embedded Javascript")
-  @Key("ceTitle")
-  String ceTitle();
+  @DefaultStringValue("")
+  @Key("clientArchitectureIntro")
+  String clientArchitectureIntro();
 
   /**
    * Translated "Cross-browser compatibility".
@@ -97,24 +61,6 @@ public interface Constants extends com.google.gwt.i18n.client.ConstantsWithLooku
   String crossBrowser();
 
   /**
-   * Translated "Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.".
-   * 
-   * @return translated "Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects."
-   */
-  @DefaultStringValue("Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.")
-  @Key("gsHTML5")
-  String gsHTML5();
-
-  /**
-   * Translated "For improved cross-browser rendering, we use <a target=\"_blank\" href=\"http://necolas.github.io/normalize.css/\">Normalize.css</a>, a project by <a target=\"_blank\" href=\"http://twitter.com/necolas\">Nicolas Gallagher</a> and <a target=\"_blank\" href=\"http://twitter.com/jon_neal\">Jonathan Neal</a>.".
-   * 
-   * @return translated "For improved cross-browser rendering, we use <a target=\"_blank\" href=\"http://necolas.github.io/normalize.css/\">Normalize.css</a>, a project by <a target=\"_blank\" href=\"http://twitter.com/necolas\">Nicolas Gallagher</a> and <a target=\"_blank\" href=\"http://twitter.com/jon_neal\">Jonathan Neal</a>."
-   */
-  @DefaultStringValue("For improved cross-browser rendering, we use <a target=\"_blank\" href=\"http://necolas.github.io/normalize.css/\">Normalize.css</a>, a project by <a target=\"_blank\" href=\"http://twitter.com/necolas\">Nicolas Gallagher</a> and <a target=\"_blank\" href=\"http://twitter.com/jon_neal\">Jonathan Neal</a>.")
-  @Key("gsNormalizeCss")
-  String gsNormalizeCss();
-
-  /**
    * Translated "Home".
    * 
    * @return translated "Home"
@@ -122,15 +68,6 @@ public interface Constants extends com.google.gwt.i18n.client.ConstantsWithLooku
   @DefaultStringValue("Home")
   @Key("home")
   String home();
-
-  /**
-   * Translated "Make a paragraph stand out by calling <code>lead()</code> method.".
-   * 
-   * @return translated "Make a paragraph stand out by calling <code>lead()</code> method."
-   */
-  @DefaultStringValue("Make a paragraph stand out by calling <code>lead()</code> method.")
-  @Key("leadBodyCopy")
-  String leadBodyCopy();
 
   /**
    * Translated "If you prefer, we provide a maven archetype. It is the easiest way to start using Virtuoze from scratch.".
@@ -176,6 +113,15 @@ public interface Constants extends com.google.gwt.i18n.client.ConstantsWithLooku
   @DefaultStringValue("Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.")
   @Key("sampleText")
   String sampleText();
+
+  /**
+   * Translated "Sizing".
+   * 
+   * @return translated "Sizing"
+   */
+  @DefaultStringValue("Sizing")
+  @Key("sizing")
+  String sizing();
 
   /**
    * Translated "Someone famous and virtuous".

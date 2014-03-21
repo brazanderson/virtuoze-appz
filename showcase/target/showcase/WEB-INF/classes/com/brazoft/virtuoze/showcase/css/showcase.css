@@ -681,6 +681,7 @@ h1[id] {
 .bs-example > .btn, .bs-example > .btn-group {
     margin-bottom: 5px;
     margin-top: 5px;
+    margin-right : 5px;
 }
 .bs-example > .btn-toolbar + .btn-toolbar {
     margin-top: 10px;

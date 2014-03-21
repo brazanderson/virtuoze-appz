@@ -37,10 +37,10 @@ public class AlertPage extends Page {
     
     Example example = this.addExample();
     
-    example.sample().add(this.createAlert(Color.SUCCESS, Bundle.constants.alertSuccess()));
-    example.sample().add(this.createAlert(Color.INFO, Bundle.constants.alertInfo()));
-    example.sample().add(this.createAlert(Color.WARNING, Bundle.constants.alertWarning()));
-    example.sample().add(this.createAlert(Color.DANGER, Bundle.constants.alertDanger()));
+    example.sample().add(this.createAlert(Color.SUCCESS, Bundle.constants.alertSuccess()))
+    .add(this.createAlert(Color.INFO, Bundle.constants.alertInfo()))
+    .add(this.createAlert(Color.WARNING, Bundle.constants.alertWarning()))
+    .add(this.createAlert(Color.DANGER, Bundle.constants.alertDanger()));
     
     example.code().add(CodeRepository.get().java("alert", Bundle.constants.alertSuccess(), Bundle.constants.alertInfo(), Bundle.constants.alertWarning(), Bundle.constants.alertDanger()));
     

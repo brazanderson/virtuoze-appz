@@ -43,7 +43,6 @@ public class ClientPage extends Page {
     this.addText().html(Bundle.constants.mavenPieces());
     this.addText().html(CodeRepository.get().xml("client.maven.parent"));
     this.addText().html(CodeRepository.get().xml("client.maven.dependencies"));
-    this.addText().html(CodeRepository.get().xml("maven.repository"));
     this.addTitle().text("Maven archetype");
     this.addText().html(Bundle.constants.mavenArchetype());
     this.addText().html(CodeRepository.get().plain("client.maven.archetype", Bundle.constants.version()));

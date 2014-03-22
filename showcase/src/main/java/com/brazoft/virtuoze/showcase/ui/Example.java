@@ -17,11 +17,12 @@ package com.brazoft.virtuoze.showcase.ui;
 import com.brazoft.virtuoze.ui.Composite;
 import com.brazoft.virtuoze.ui.Elements;
 import com.brazoft.virtuoze.ui.Widget;
+import com.google.gwt.dom.client.Style.Unit;
 
 public class Example extends Widget<Example> {
-  private Code code = new Code();
+  private Code code = new Code().hide();
 
-  private Sample sample = new Sample();
+  private Sample sample = new Sample().hide();
 
   public Example() {
     super(Elements.div());
@@ -29,24 +30,29 @@ public class Example extends Widget<Example> {
   }
 
   public Code code() {
-    return this.code;
+    if(!this.sample.visible()){
+      this.code.style().marginTop(10, Unit.PX);
+    }
+    
+    return this.code.show();
   }
 
   public Sample sample() {
-    return this.sample;
+    this.code.style().clearMarginTop();
+    return this.sample.show();
   }
 
   public class Sample extends Composite<Sample> {
     public Sample() {
       super(Elements.div());
-      this.classes().set("bs-example");
+      this.css().set("bs-example");
     }
   }
 
   public class Code extends Widget<Code> {
     public Code() {
       super(Elements.div());
-      this.classes().set("highlight");
+      this.css().set("highlight");
     }
 
     public Code add(String code) {

@@ -55,7 +55,7 @@ public class AlertPage extends Page {
   
   private Alert createAlert(Alert.Color color, String sample){
     Alert alert = new Alert();
-    alert.classes().append(color);
+    alert.css().append(color);
     alert.add(new Paragraph().html(sample));
     return alert;
   }

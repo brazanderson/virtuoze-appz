@@ -40,7 +40,7 @@ public class Showcase implements EntryPoint {
     main.add(client).style().top(64, Unit.PX);
     
     Navbar navbar = new Navbar();
-    navbar.classes().append(Navbar.Placement.TOP);
+    navbar.css().append(Navbar.Placement.TOP);
     navbar.brand().image(new Image().src(Bundle.icons.logo()));
     navbar.leftFacet().addItem().text("Client").onClick(new ClickHandler() {
       

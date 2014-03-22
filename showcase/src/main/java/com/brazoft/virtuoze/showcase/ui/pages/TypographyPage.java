@@ -90,7 +90,7 @@ public class TypographyPage extends Page {
     this.addText().html("Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.");
     example = this.addExample();
     this.listSample(OrderList.Type.UNORDERED);
-    list.classes().append(OrderList.Style.UNSTYLED);
+    list.css().append(OrderList.Style.UNSTYLED);
     example.sample().add(list);
     example.code().add(CodeRepository.get().java("typography.list.unstyled"));
     
@@ -98,7 +98,7 @@ public class TypographyPage extends Page {
     this.addText().html("Place all list items on a single line with <code>display: inline-block;</code> and some light padding.");
     example = this.addExample();
     list = this.listSample(OrderList.Type.UNORDERED);
-    list.classes().append(OrderList.Style.INLINE);
+    list.css().append(OrderList.Style.INLINE);
     example.sample().add(list);
     example.code().add(CodeRepository.get().java("typography.list.inline"));
   }
@@ -159,7 +159,7 @@ public class TypographyPage extends Page {
     example = this.addExample();
     for(Heading.Level level : Heading.Level.values()){
       Paragraph text = new Paragraph().text(Bundle.messages.headingText(level.level()));
-      text.classes().set(HeadingClass.get(level));
+      text.css().set(HeadingClass.get(level));
       example.sample().add(text);
     }
     example.code().add(CodeRepository.get().java("typography.heading.classes"));

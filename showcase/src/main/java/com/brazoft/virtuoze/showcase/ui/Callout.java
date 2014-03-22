@@ -25,7 +25,7 @@ public class Callout extends Widget<Callout> {
   
   public Callout() {
     super(Elements.div());
-    this.classes().set("bs-callout");
+    this.css().set("bs-callout");
   }
   
   public Heading addHeading(){

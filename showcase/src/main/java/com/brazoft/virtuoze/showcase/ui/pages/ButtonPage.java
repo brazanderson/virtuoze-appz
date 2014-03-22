@@ -15,9 +15,9 @@
 package com.brazoft.virtuoze.showcase.ui.pages;
 
 import com.brazoft.virtuoze.showcase.ui.Bundle;
+import com.brazoft.virtuoze.showcase.ui.CodeConsumer.CodeRepository;
 import com.brazoft.virtuoze.showcase.ui.Example;
 import com.brazoft.virtuoze.showcase.ui.Page;
-import com.brazoft.virtuoze.showcase.ui.CodeConsumer.CodeRepository;
 import com.brazoft.virtuoze.ui.Button;
 import com.brazoft.virtuoze.ui.ButtonGroup;
 import com.brazoft.virtuoze.ui.DropButton;
@@ -139,7 +139,7 @@ public class ButtonPage extends Page {
     this.addText().html("Instead of applying button sizing classes to every button in a group, just add <code>ButtonGroup.Size</code> class.");
     example = this.addExample();
     btnGroup = this.createButtonGroup();
-    btnGroup.classes().append(ButtonGroup.Size.LARGE);
+    btnGroup.css().append(ButtonGroup.Size.LARGE);
     example.sample().add(btnGroup);
     example.code().add(CodeRepository.get().java("button.group.sizing"));
     
@@ -147,7 +147,7 @@ public class ButtonPage extends Page {
     this.addText().html("Make a set of buttons appear vertically stacked rather than horizontally. <strong class='text-danger'>Split button dropdowns are not supported here.</strong>");
     example = this.addExample();
     btnGroup = this.createButtonGroup();
-    btnGroup.classes().append(ButtonGroup.Orientation.VERTICAL);
+    btnGroup.css().append(ButtonGroup.Orientation.VERTICAL);
     example.sample().add(btnGroup);
     example.code().add(CodeRepository.get().java("button.group.vertical"));
     
@@ -182,7 +182,7 @@ public class ButtonPage extends Page {
   
   private SplitButton createSplitButton(String text, UIClass clazz){
     SplitButton btn = new SplitButton();
-    btn.text(text).classes().append(clazz);
+    btn.text(text).css().append(clazz);
     btn.menu().addItem().text("Action");
     btn.menu().addItem().text("Another Action");
     btn.menu().addDivider();
@@ -198,7 +198,7 @@ public class ButtonPage extends Page {
   
   private DropButton createDropButton(String text, UIClass clazz){
     DropButton btn = new DropButton();
-    btn.text(text).classes().append(clazz);
+    btn.text(text).css().append(clazz);
     btn.menu().addItem().text("Action");
     btn.menu().addItem().text("Another Action");
     btn.menu().addDivider();
@@ -214,7 +214,7 @@ public class ButtonPage extends Page {
   
   private Button createButton(String text, UIClass clazz){
     Button btn = new Button().text(text);
-    btn.classes().append(clazz);
+    btn.css().append(clazz);
     return btn;
   }
 

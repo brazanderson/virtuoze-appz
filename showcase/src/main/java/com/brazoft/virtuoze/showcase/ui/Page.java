@@ -30,14 +30,14 @@ public abstract class Page extends Widget<Page> {
 
   public Page(String title) {
     super(Elements.div());
-    this.addChild(this.header).addChild(this.body).classes().append("page");
+    this.addChild(this.header).addChild(this.body).css().append("page");
     this.header.text(title);
     StyleInjector.inject(".page > .page-header, .page > .page-header > h1, .page > .page-header > h1[id]{ margin-top: 0; padding-top: 0;}");
   }
   
   protected Callout addCallout(Callout.Color color){
     Callout callout = new Callout();
-    callout.classes().append(color);
+    callout.css().append(color);
     this.body.add(callout);
     return callout;
   }
@@ -79,7 +79,7 @@ public abstract class Page extends Widget<Page> {
   public class PageBody extends Composite<PageBody> {
     public PageBody() {
       super(Elements.div());
-      this.classes().set("page-body");
+      this.css().set("page-body");
     }
   }
 }

@@ -18,6 +18,8 @@ import com.brazoft.virtuoze.showcase.ui.pages.AlertPage;
 import com.brazoft.virtuoze.showcase.ui.pages.BadgePage;
 import com.brazoft.virtuoze.showcase.ui.pages.BreadcrumbPage;
 import com.brazoft.virtuoze.showcase.ui.pages.ButtonPage;
+import com.brazoft.virtuoze.showcase.ui.pages.GridPage;
+import com.brazoft.virtuoze.showcase.ui.pages.IconPage;
 import com.brazoft.virtuoze.showcase.ui.pages.TypographyPage;
 import com.brazoft.virtuoze.ui.ListGroup;
 import com.brazoft.virtuoze.ui.ListGroup.ListGroupItem;
@@ -38,10 +40,12 @@ public class PageList extends Widget<PageList> {
   
   private void setup(){
     this.add(new AlertPage())
-    .add(new BadgePage())
-    .add(new BreadcrumbPage())
-    .add(new ButtonPage());
-    this.add(new TypographyPage());
+    //.add(new BadgePage())
+    //.add(new BreadcrumbPage())
+    //.add(new ButtonPage())
+    //.add(new GridPage())
+    .add(new IconPage());
+    //this.add(new TypographyPage());
   }
   
   public PageList reset(){

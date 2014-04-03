@@ -698,6 +698,10 @@ h1[id] {
 .bs-example > .list-group {
     max-width: 400px;
 }
+.bs-example > .label{
+	margin-right: 5px;
+	margin-left: 5px;
+}
 .bs-example .navbar:last-child {
     margin-bottom: 0;
 }

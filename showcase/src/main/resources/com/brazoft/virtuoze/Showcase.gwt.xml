@@ -26,4 +26,5 @@
   <script src="shCore.js"/>
   <script src="shBrushJava.js"/>
   <script src="shBrushXml.js"/>
+  <script src="shBrushCss.js"/>
 </module>

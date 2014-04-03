@@ -14,18 +14,26 @@
  */
 package com.brazoft.virtuoze.showcase.ui;
 
+import com.brazoft.virtuoze.showcase.ui.Example.Code;
 import com.brazoft.virtuoze.ui.CssClass;
 import com.brazoft.virtuoze.ui.Elements;
 import com.brazoft.virtuoze.ui.Heading;
 import com.brazoft.virtuoze.ui.Paragraph;
 import com.brazoft.virtuoze.ui.StyleChooser;
 import com.brazoft.virtuoze.ui.Widget;
+import com.brazoft.virtuoze.ui.api.UIWidget;
 
 public class Callout extends Widget<Callout> {
   
   public Callout() {
     super(Elements.div());
     this.css().set("bs-callout");
+  }
+  
+  public Code addCode(){
+    Code code = new Example().code();
+    this.add(code.detach());
+    return code;
   }
   
   public Heading addHeading(){
@@ -38,6 +46,10 @@ public class Callout extends Widget<Callout> {
     Paragraph text = new Paragraph();
     this.addChild(text);
     return text;
+  }
+  
+  public Callout add(UIWidget widget){
+    return this.addChild(widget);
   }
 
   public static class Color extends CssClass {

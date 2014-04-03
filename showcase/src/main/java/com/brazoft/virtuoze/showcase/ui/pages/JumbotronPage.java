@@ -14,24 +14,33 @@
  */
 package com.brazoft.virtuoze.showcase.ui.pages;
 
+import com.brazoft.virtuoze.showcase.ui.Example;
 import com.brazoft.virtuoze.showcase.ui.Page;
+import com.brazoft.virtuoze.showcase.ui.CodeConsumer.CodeRepository;
+import com.brazoft.virtuoze.ui.Jumbotron;
 import com.brazoft.virtuoze.ui.ListGroup.ListGroupItem;
 
-public class CopyPage extends Page {
-  private static final String TITLE = "";
-  public CopyPage() {
+public class JumbotronPage extends Page {
+  private static final String TITLE = "Jumbotron";
+  public JumbotronPage() {
     super(TITLE);
     this.setup();
   }
   
   private void setup(){
-    
+    Example example = this.addExample();
+    Jumbotron jumbotron = new Jumbotron();
+    jumbotron.header().text("Hi there!");
+    jumbotron.message().text("This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.");
+    jumbotron.button().text("Learn more");
+    example.sample().add(jumbotron);
+    example.code().add(CodeRepository.get().java("jumbotron"));
   }
 
   @Override
-  public CopyPage summary(ListGroupItem item) {
+  public JumbotronPage summary(ListGroupItem item) {
     item.addHeading().text(TITLE);
-    item.addText().text("");
+    item.addText().text("This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.");
     return this;
   }
 }

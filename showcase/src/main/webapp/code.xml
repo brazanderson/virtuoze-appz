@@ -9,7 +9,7 @@
     new Alert().add(new Paragraph().html("{0}")).closeable().css().append(Alert.Color.SUCCESS);
   </code>
   <code id="badge">
-    new Badge().text("{0}")
+    new Badge().text("{0}");
   </code>
   <code id="badge.adapt.pill">
     Pills pills = new Pills();
@@ -76,7 +76,8 @@
     btn.menu().addItem().text("Action");
     btn.menu().addItem().text("Another Action");
     btn.menu().addDivider();
-    btn.menu().addItem().text("Vituous Action").onClick(new ClickHandler() {
+    btn.menu().addItem().text("Vituous
+    Action").onClick(new ClickHandler() {
       @Override
       public void onClick(ClickEvent event) {
         Window.alert("You've got the power. Go virtuous. :)");
@@ -108,7 +109,7 @@
         Window.alert("You've got the power. Go virtuous. :)");
       }
     });
-    
+
     SplitButton split = new SplitButton().up();
     split.text("Primary").css().append(ButtonColor.PRIMARY);
     split.menu().addItem().text("Action");
@@ -198,7 +199,12 @@
     </dependencies>
   </code>
   <code id="client.maven.archetype">
-    <pre><code>mvn archetype:generate -DarchetypeGroupId=com.brazoft.virtuoze -DarchetypeArtifactId=client-archetype -DarchetypeVersion={0}</code></pre>
+    <pre>
+      <code>mvn archetype:generate
+        -DarchetypeGroupId=com.brazoft.virtuoze
+        -DarchetypeArtifactId=client-archetype -DarchetypeVersion={0}
+      </code>
+    </pre>
   </code>
   <code id="container.fixed">
     new Container(Container.Type.FIXED);
@@ -221,11 +227,88 @@
   </code>
   <code id="container.offset">
     row.addColumn().offset(1, ViewPort.MEDIUM);
-    row.addColumn().offset(2, ViewPort.MEDIUM).offset(1, ViewPort.X_SMALL);
+    row.addColumn().offset(2, ViewPort.MEDIUM).offset(1,
+    ViewPort.X_SMALL);
   </code>
   <code id="icon">
     new Button().text("Iconic").icon(Icon.LEAF);
     new Button().text("Iconic").icon(Icon.CLOUD).css().append(ButtonColor.PRIMARY);
+  </code>
+  <code id="image">
+    new Image().src(Bundle.images.v()).css().append(Image.Shape.CIRCLE);
+    new Image().src(Bundle.images.v()).css().append(Image.Shape.ROUNDED);
+    new Image().src(Bundle.images.v()).css().append(Image.Shape.THUMBNAIL);
+  </code>
+  <code id="image.responsive">
+    new Image().src(Bundle.images.logo()).responsive()
+  </code>
+  <code id="jumbotron">
+    Jumbotron jumbotron = new Jumbotron();
+    jumbotron.header().text("Hi there!");
+    jumbotron.message().text("This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.");
+    jumbotron.button().text("Learn more");
+  </code>
+  <code id="label.heading">
+    for(Heading.Level level : Heading.Level.values()){
+      Heading heading = new Heading(level).text("Heading example");
+      new Label().text("Label").appendTo(heading);
+    }
+  </code>
+  <code id="label.variations">
+    new Label().text("Label").css().append(Label.Color.DEFAULT);
+    new Label().text("Label").css().append(Label.Color.PRIMARY);
+    new Label().text("Label").css().append(Label.Color.SUCCESS);
+    new Label().text("Label").css().append(Label.Color.INFO);
+    new Label().text("Label").css().append(Label.Color.WARNING);
+    new Label().text("Label").css().append(Label.Color.DANGER);
+  </code>
+  <code id="media">
+    Media media = new Media();
+    media.object().addImage().src(Bundle.images.favico());
+    media.body().addHeading().text("Media heading");
+    media.body().addText().text("Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.");
+
+    Media sub = media.body().addMedia();
+    sub.object().addImage().src(Bundle.images.favico());
+    sub.body().addHeading().text("Media heading");
+    sub.body().addText().text("Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.");
+  </code>
+  <code id="media.list">
+    //Consider construct Media using previous example. For each add() a new Media object should be created.
+    MediaList list = new MediaList();
+    list.add(media);
+    media = new Media();
+    media.object().css().append(Floating.RIGHT);
+    media.body().add(sub);
+    list.add(media);
+    list.add(media);
+  </code>
+  <code id="navbar">
+    Navbar navbar = new Navbar();
+    navbar.brand().text("Brand");
+    navbar.leftFacet().addItem().text("Link");
+    navbar.leftFacet().addText().text("Text");
+    navbar.leftFacet().addButton().text("Button");
+    DropItem button = navbar.rightFacet().addDropItem();
+    button.text("Dropdown");
+    button.menu().addItem().text("Link");
+  </code>
+  <code id="navbar.top.snippet">
+    body { padding-top: 70px; }
+  </code>
+  <code id="navbar.bottom.snippet">
+    body { padding-bottom: 70px; }
+  </code>
+  <code id="navbar.inverse">
+    navbar = new Navbar();
+    navbar.css().append(Navbar.Type.INVERSE);
+    navbar.brand().text("Brand");
+    navbar.leftFacet().addItem().text("Link");
+    navbar.leftFacet().addText().text("Text");
+    navbar.leftFacet().addButton().text("Button");
+    button = navbar.rightFacet().addDropItem();
+    button.text("Dropdown");
+    button.menu().addItem().text("Link");
   </code>
   <code id="typography.heading">
     new Heading(Heading.Level.ONE).text("H1. Heading");

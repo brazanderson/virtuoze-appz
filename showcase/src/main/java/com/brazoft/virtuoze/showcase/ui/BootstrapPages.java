@@ -15,24 +15,19 @@
 package com.brazoft.virtuoze.showcase.ui;
 
 import com.brazoft.virtuoze.showcase.ui.pages.AlertPage;
-import com.brazoft.virtuoze.showcase.ui.pages.BadgePage;
-import com.brazoft.virtuoze.showcase.ui.pages.BreadcrumbPage;
-import com.brazoft.virtuoze.showcase.ui.pages.ButtonPage;
-import com.brazoft.virtuoze.showcase.ui.pages.GridPage;
-import com.brazoft.virtuoze.showcase.ui.pages.IconPage;
-import com.brazoft.virtuoze.showcase.ui.pages.TypographyPage;
+import com.brazoft.virtuoze.showcase.ui.pages.NavbarPage;
 import com.brazoft.virtuoze.ui.ListGroup;
 import com.brazoft.virtuoze.ui.ListGroup.ListGroupItem;
 import com.brazoft.virtuoze.ui.Widget;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 
-public class PageList extends Widget<PageList> {
+public class BootstrapPages extends Widget<BootstrapPages> {
   private ListGroup list = new ListGroup();
   
   private PageFlow flow;
   
-  public PageList(PageFlow flow) {
+  public BootstrapPages(PageFlow flow) {
     this.compound(this.list);
     this.flow = flow;
     this.setup();
@@ -44,23 +39,30 @@ public class PageList extends Widget<PageList> {
     //.add(new BreadcrumbPage())
     //.add(new ButtonPage())
     //.add(new GridPage())
-    .add(new IconPage());
+    //.add(new IconPage())
+    //.add(new ImagePage())
+    //.add(new JumbotronPage())
+    //.add(new LabelPage())
+    //.add(new MediaPage())
+    .add(new NavbarPage())
+    ;
+    //.add(new ThumbnailPage())
     //this.add(new TypographyPage());
   }
   
-  public PageList reset(){
+  public BootstrapPages reset(){
     this.list.reset();
     return this;
   }
   
-  public PageList add(final Page page){
+  public BootstrapPages add(final Page page){
     this.flow.flow(page);
     ListGroupItem item = this.list.addItem();
     item.onClick(new ClickHandler() {
       
       @Override
       public void onClick(ClickEvent event) {
-        PageList.this.flow.select(page.id());
+        BootstrapPages.this.flow.select(page.id());
       }
     });
     

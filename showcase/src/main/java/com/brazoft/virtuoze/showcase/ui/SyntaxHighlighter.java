@@ -16,11 +16,19 @@ package com.brazoft.virtuoze.showcase.ui;
 
 public class SyntaxHighlighter {
   private static final SyntaxHighlighter instance = new SyntaxHighlighter();
-  
+
   public static SyntaxHighlighter get() {
     return instance;
   }
-  
+
+  public native String css(String code)/*-{
+		var params = {};
+		params['toolbar'] = false;
+		var brush = new $wnd.SyntaxHighlighter.brushes.CSS();
+		brush.init(params);
+		return brush.getHtml(code);
+  }-*/;
+
   public native String java(String code)/*-{
 		var params = {};
 		params['toolbar'] = false;

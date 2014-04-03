@@ -33,7 +33,7 @@ public class Showcase implements EntryPoint {
     Column main = layout.main();
     
     final PageFlow pageFlow = new PageFlow(main);
-    final PageList pageList = new PageList(pageFlow);
+    final BootstrapPages pageList = new BootstrapPages(pageFlow);
     
     final ClientPage client = new ClientPage();
     pageFlow.flow(client);

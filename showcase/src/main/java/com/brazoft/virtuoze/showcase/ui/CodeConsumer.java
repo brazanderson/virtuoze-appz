@@ -77,6 +77,10 @@ public class CodeConsumer implements XmlCallback {
     public final String xml(String codeId, Object... args) {
       return SyntaxHighlighter.get().xml(this.plain(codeId, args));
     }
+    
+    public final String css(String codeId, Object... args) {
+      return SyntaxHighlighter.get().css(this.plain(codeId, args));
+    }
 
     public String plain(String codeId, Object... args) {
       return MessageFormat.format(this.get(codeId), args);

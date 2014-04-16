@@ -10,3 +10,7 @@ mvn clean package -P gwt
 
 After this just run the command line:
 mvn jetty:run -P gwt
+
+Note
+=============
+We are in process to promote our libraries to maven central. Until there you need to install virtuoze locally in your environment.
